@@ -9,7 +9,7 @@ const AuthView = () => {
       <div className="flex flex-col items-center justify-center mb-10 w-fit">
         <img src="/brand.svg" alt="LoomLetter" className="h-10 mb-2" />
         <p className="font-medium text-foreground/80 text-center w-full">
-          Newsletter Reader Web App
+          Newsletter Reader Web App.
         </p>
       </div>
       <Waitlist />
