@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --background: 255, 255, 255;
-  --foreground: 10, 10, 10;
-  --primary: 20, 150, 100;
+  --background: 10, 10, 10;
+  --foreground: 255, 255, 255;
+  --primary: 50, 243, 174;
   --secondary: 0, 224, 255;
 
   /* Gradient colors */
@@ -17,14 +17,14 @@
   --gradient-shadow: rgba(0, 0, 0, 0.7);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: 10, 10, 10;
     --foreground: 255, 255, 255;
     --primary: 50, 243, 174;
 
   }
-}
+} */
 
 
 body {
