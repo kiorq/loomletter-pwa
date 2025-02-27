@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 255, 255, 255;
+  --foreground: 10, 10, 10;
+  --primary: 20, 150, 100;
+  --secondary: 0, 224, 255;
+
+  /* Gradient colors */
+  --gradient-primary: rgba(var(--primary), 0.6);
+  --gradient-secondary: rgba(var(--secondary), 0.6);
+  --gradient-highlight: rgba(255, 255, 255, 0.2);
+  --gradient-primary-soft: rgba(var(--primary), 0.5);
+  --gradient-secondary-soft: rgba(var(--secondary), 0.5);
+  --gradient-shadow: rgba(0, 0, 0, 0.7);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: 10, 10, 10;
+    --foreground: 255, 255, 255;
+    --primary: 50, 243, 174;
+
+  }
+}
+
+
+body {
+  color: rgb(var(--foreground));
+  background: rgb(var(--background));
+  position: relative;
+}
+
+.mesh-gradient-bg {
+  background: radial-gradient(circle at 15% 15%, var(--gradient-primary) 12%, transparent 50%),
+    radial-gradient(circle at 85% 15%, var(--gradient-secondary) 12%, transparent 50%),
+    radial-gradient(circle at 50% 10%, var(--gradient-highlight) 10%, transparent 40%),
+    radial-gradient(circle at 30% 30%, var(--gradient-primary-soft) 15%, transparent 45%),
+    radial-gradient(circle at 70% 35%, var(--gradient-secondary-soft) 15%, transparent 45%),
+    radial-gradient(circle at 50% 5%, var(--gradient-shadow) 30%, rgb(var(--background)) 50%),
+    rgb(var(--background));
+
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: 1;
+
+  @apply translate-y-[-40vh] md:translate-y-[-60vh] w-screen h-screen absolute top-0 left-0 z-[-1];
+}
+
+@media (prefers-color-scheme: dark) {
+  .mesh-gradient-bg {
+    opacity: 0.5;
+  }
+}
+
+.-text-gradient {
+  background: linear-gradient(to right, #32F3AE, #00E0FF);
+  color: transparent;
+  background-clip: text;
+}
+
+.-bg-gradient {
+  background: linear-gradient(to right, #32F3AE, #00E0FF);
+}
+
+.-cta-gradient {
+  background: linear-gradient(to right, #32F3AE, #00E0FF);
+  transition: background 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.-cta-gradient:hover {
+  background: linear-gradient(to right, #32F3AE, #00E0FF);
+  box-shadow: 0 4px 20px rgba(0, 224, 255, 1);
+}
+
+.-bg-gradient--on-hover-only:hover {
+  background: linear-gradient(to right, #32F3AE, #00E0FF);
+
+}
+
+.-bg-text--on-hover-only:hover {
+  background: linear-gradient(to right, #32F3AE, #00E0FF);
+  color: transparent;
+  background-clip: text;
+
+}

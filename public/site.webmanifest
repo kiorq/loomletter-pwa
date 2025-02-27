@@ -1,0 +1,20 @@
+{
+  "name": "LoomLetter",
+  "short_name": "LoomLetter",
+  "description": "LoomLetter is your go-to newsletter reader app, bringing together all your favorite newsletters in one seamless, intuitive platform. Discover, read, and enjoy a curated reading experience like no other.",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#1a1a1a",
+  "background_color": "#1a1a1a",
+  "display": "standalone"
+}
